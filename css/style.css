@@ -1,0 +1,130 @@
+#hamburger1 {
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  width: 60px;
+  height: 45px; }
+  #hamburger1 span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #27ae60;
+    border: none;
+    border-radius: 5px;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 2s ease-in-out; }
+  #hamburger1 span:nth-child(1) {
+    top: 0px; }
+  #hamburger1 span:nth-child(2), #hamburger1 span:nth-child(3) {
+    top: 18px; }
+  #hamburger1 span:nth-child(4) {
+    top: 36px; }
+
+#hamburger1.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%; }
+
+#hamburger1.open span:nth-child(2) {
+  transform: rotate(45deg); }
+
+#hamburger1.open span:nth-child(3) {
+  transform: rotate(-45deg); }
+
+#hamburger1.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%; }
+
+.container {
+  max-width: 1140px;
+  width: 1140px;
+  margin: 0 auto; }
+
+.row {
+  display: block;
+  min-height: 200px;
+  margin-bottom: 10px; }
+
+.row::after {
+  clear: both;
+  display: table;
+  content: ''; }
+
+.box {
+  height: 100px;
+  width: 100px;
+  float: left;
+  margin-right: 10px; }
+
+.red {
+  background-color: #e74c3c; }
+
+.green {
+  background-color: #27ae60; }
+
+.translate {
+  transform: translate(100px, 100px);
+  /*when using transform you need to use the below as well*/
+  -webkit-transform: translate(100px, 100px);
+  /*safari*/
+  -ms-transform: translate(100px, 100px);
+  /*IE 9*/
+  -moz-transform: translate(100px, 100px);
+  /*firefox*/ }
+
+.rotate {
+  transform: rotate(45deg); }
+
+.scale {
+  transform: scale(0.5); }
+
+.skewx {
+  transform: skewX(20deg); }
+
+.skewy {
+  transform: skewY(20deg); }
+
+.matrix {
+  /* matrix(scaleX, skewY, skewX, scaleY, translateX, translateY) */
+  transform: matrix(1, 2, 2, 1, 50, 20); }
+
+.transition {
+  /* transition: width 2s; */
+  /* -webkit-transform: width 2s;
+  -ms-transform: width 2s;
+  -moz-transform: width 2s; */
+  /* transition-delay: 2s; */
+  /* transition-timing-function: ease-in; */
+  transition: 2s all ease-in; }
+
+.transition:hover {
+  width: 500px;
+  background-color: #2980b9;
+  transform: rotate(720deg); }
+
+#rotateBox {
+  transition: 2s all ease-in; }
+
+.rotate360 {
+  transform: rotate(360deg);
+  background-color: #2980b9; }
+
+#flexContainer {
+  display: flex;
+  max-width: 1200px;
+  padding: 5px;
+  margin: 0 auto; }
+
+.column {
+  transition: 1s all ease-in;
+  flex: 1;
+  height: 200px;
+  border: 1px solid black; }
+
+.grow {
+  flex: 2; }
+
+/*# sourceMappingURL=style.css.map */
